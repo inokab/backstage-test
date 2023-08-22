@@ -9,4 +9,4 @@ spec:
   owner: pet-store-team
   system: pet-store-service
   definition:
-    $json: https://petstore.swagger.io/v2/swagger.json
+    $text: https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml
