@@ -9,6 +9,9 @@ metadata:
     github.com/project-slug: inokab/backstage-test
   tags:
     - php
+  links:
+    - url: https://gitlab.heu.group/one-marketplace/merchant/ms-eshop-service
+      title: Repository
 spec:
   type: service
   owner: pet-store-team
