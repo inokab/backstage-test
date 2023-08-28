@@ -27,16 +27,3 @@ spec:
   system: pet-store-service
   definition:
     $text: https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml
-
-apiVersion: backstage.io/v1alpha1
-kind: API
-metadata:
-  name: pet-store-api
-  description: This is a sample server Petstore server.
-spec:
-  type: openapi
-  lifecycle: production
-  owner: pet-store-team
-  system: pet-store-service
-  definition:
-    $text: https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml
