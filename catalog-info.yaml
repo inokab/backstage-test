@@ -1,22 +1,4 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: pet-store
-  title: Pet Store Service
-  description: Service in charge of ...
-  annotations:
-    github.com/project-slug: inokab/backstage-test
-  tags:
-    - php
-spec:
-  type: service
-  owner: pet-store-team
-  system: pet-store-service
-  lifecycle: production
-providesApis:
-  - pet-store-api
----
-apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
   name: pet-store-api
