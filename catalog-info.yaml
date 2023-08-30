@@ -1,4 +1,3 @@
----
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -10,7 +9,28 @@ metadata:
   tags:
     - php
   links:
-    - url: https://gitlab.heu.group/one-marketplace/merchant/ms-eshop-service
+    - url: https://github.com/inokab/backstage-test
+      title: Repository
+spec:
+  type: service
+  owner: pet-store-team
+  system: pet-store-service
+  lifecycle: production
+  providesApis:
+    - pet-store-api
+---
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pet-store-2
+  title: Pet Store
+  description: Service in charge of ...
+  annotations:
+    github.com/project-slug: inokab/backstage-test
+  tags:
+    - php
+  links:
+    - url: https://github.com/inokab/backstage-test
       title: Repository
 spec:
   type: service
