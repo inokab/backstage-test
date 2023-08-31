@@ -52,7 +52,7 @@ spec:
   owner: pet-store-team
   system: pet-store-service
   definition:
-    $yaml: ./docs/api1.yml
+    $text: ./storage/docs/api1.yml
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -65,7 +65,7 @@ spec:
   owner: pet-store-team
   system: pet-store-service
   definition:
-    $yaml: ./docs/api2.yml
+    $text: ./storage/docs/api2.yml
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
@@ -78,4 +78,4 @@ spec:
   owner: pet-store-team
   system: pet-store-service
   definition:
-    $yaml: ./docs/api3.yml
+    $text: ./storage/docs/api3.yml
