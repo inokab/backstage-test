@@ -1,0 +1,38 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: pet-store-api1
+  description: This is a sample server Petstore server.
+spec:
+  type: openapi
+  lifecycle: production
+  owner: pet-store-team
+  system: pet-store-service
+  definition:
+    $text: ../../docs/api1.yml
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: pet-store-api2
+  description: This is a sample server Petstore server.
+spec:
+  type: openapi
+  lifecycle: production
+  owner: pet-store-team
+  system: pet-store-service
+  definition:
+    $text: ../../docs/api2.yml
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: pet-store-api3
+  description: This is a sample server Petstore server.
+spec:
+  type: openapi
+  lifecycle: production
+  owner: pet-store-team
+  system: pet-store-service
+  definition:
+    $text: ../../docs/api3.yml

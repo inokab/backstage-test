@@ -1,54 +1,10 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: Location
 metadata:
-  name: pet-store
-  title: Pet Store Service
-  description: Service in charge of ...
-  annotations:
-    github.com/project-slug: inokab/backstage-test
-  tags:
-    - php
-  links:
-    - url: https://github.com/inokab/backstage-test
-      title: Repository
+  name: infra-resources
 spec:
-  type: service
-  owner: pet-store-team
-  system: pet-store-service
-  lifecycle: production
-  providesApis:
-    - pet-store-api
----
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: pet-store-2
-  title: Pet Store
-  description: Service in charge of ...
-  annotations:
-    github.com/project-slug: inokab/backstage-test
-  tags:
-    - php
-  links:
-    - url: https://github.com/inokab/backstage-test
-      title: Repository
-spec:
-  type: service
-  owner: pet-store-team
-  system: pet-store-service
-  lifecycle: production
-  providesApis:
-    - pet-store-api
----
-apiVersion: backstage.io/v1alpha1
-kind: API
-metadata:
-  name: pet-store-api
-  description: This is a sample server Petstore server.
-spec:
-  type: openapi
-  lifecycle: production
-  owner: pet-store-team
-  system: pet-store-service
-  definition:
-    $text: https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml
+  type: url
+  targets:
+    - ./storage/backstage/service1/service1.yml
+    - ./storage/backstage/service1/service2.yml
+    - ./storage/backstage/org.yml
