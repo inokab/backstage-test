@@ -1,9 +1,105 @@
+#apiVersion: backstage.io/v1alpha1
+#kind: Location
+#metadata:
+#  name: infra-resources
+#spec:
+#  type: url
+#  targets:
+#    - ./storage/backstage/services.yml
+#    #- ./org.yml
+
+#SERVICE 1
 apiVersion: backstage.io/v1alpha1
-kind: Location
+kind: Component
 metadata:
-  name: infra-resources
+  name: pet-store
+  title: Pet Store Service
+  description: Service in charge of ...
+  annotations:
+    github.com/project-slug: inokab/backstage-test
+  tags:
+    - php
+  links:
+    - url: https://github.com/inokab/backstage-test
+      title: Repository
 spec:
-  type: url
-  targets:
-    #- ./storage/backstage/services.yml
-    - ./org.yml
+  type: service
+  owner: pet-store-team
+  system: pet-store-service
+  lifecycle: production
+  providesApis:
+    - pet-store-api1
+    - pet-store-api3
+#SERVICE 2
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pet-store-2
+  title: Pet Store
+  description: Service in charge of ...
+  annotations:
+    github.com/project-slug: inokab/backstage-test
+  tags:
+    - php
+  links:
+    - url: https://github.com/inokab/backstage-test
+      title: Repository
+spec:
+  type: service
+  owner: pet-store-team
+  system: pet-store-service
+  lifecycle: production
+  providesApis:
+    - pet-store-api2
+#APIS
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: pet-store-api1
+  description: This is a sample server Petstore server.
+spec:
+  type: openapi
+  lifecycle: production
+  owner: pet-store-team
+  system: pet-store-service
+  definition:
+    $text: ../../docs/api1.yml
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: pet-store-api2
+  description: This is a sample server Petstore server.
+spec:
+  type: openapi
+  lifecycle: production
+  owner: pet-store-team
+  system: pet-store-service
+  definition:
+    $text: ../../docs/api2.yml
+---
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: pet-store-api3
+  description: This is a sample server Petstore server.
+spec:
+  type: openapi
+  lifecycle: production
+  owner: pet-store-team
+  system: pet-store-service
+  definition:
+    $text: ../../docs/api3.yml
+#ORG
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: pet-store-team
+  description: The Pet Store Unit
+spec:
+  type: team
+  profile:
+    displayName: Pet Store Team
+    email: infrastructure@example.com
+  children: []
+  members: [jdoe]
