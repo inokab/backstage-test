@@ -39,6 +39,7 @@ spec:
   system: pet-store-service
   lifecycle: production
   providesApis:
+    - pet-store-api1
     - pet-store-api2
 ---
 apiVersion: backstage.io/v1alpha1
