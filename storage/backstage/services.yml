@@ -1,0 +1,17 @@
+apiVersion: backstage.io/v1alpha1
+kind: Domain
+metadata:
+  name: services
+  title: Services
+spec:
+  owner: pet-store-team
+---
+apiVersion: backstage.io/v1alpha1
+kind: Location
+metadata:
+  name: service-list
+spec:
+  type: url
+  targets:
+    - ./service1/service1.yml
+    - ./service2/service2.yml

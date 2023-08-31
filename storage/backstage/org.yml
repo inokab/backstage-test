@@ -4,10 +4,9 @@ metadata:
   name: pet-store-team
   description: The Pet Store Unit
 spec:
-  type: business-unit
+  type: team
   profile:
     displayName: Pet Store Team
     email: infrastructure@example.com
-    picture: https://example.com/groups/bu-infrastructure.jpeg
-  children: [backstage, other]
+  children: []
   members: [jdoe]

@@ -5,6 +5,5 @@ metadata:
 spec:
   type: url
   targets:
-    - ./storage/backstage/service1/service1.yml
-    - ./storage/backstage/service1/service2.yml
+    - ./storage/backstage/services.yml
     - ./storage/backstage/org.yml
