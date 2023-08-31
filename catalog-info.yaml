@@ -79,16 +79,3 @@ spec:
   system: pet-store-service
   definition:
     $text: .docs/api3.yml
----
-apiVersion: backstage.io/v1alpha1
-kind: Group
-metadata:
-  name: pet-store-team
-  description: The Pet Store Unit
-spec:
-  type: team
-  profile:
-    displayName: Pet Store Team
-    email: infrastructure@example.com
-  children: []
-  members: [jdoe]
