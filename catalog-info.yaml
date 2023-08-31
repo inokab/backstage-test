@@ -1,14 +1,3 @@
-#apiVersion: backstage.io/v1alpha1
-#kind: Location
-#metadata:
-#  name: infra-resources
-#spec:
-#  type: url
-#  targets:
-#    - ./storage/backstage/services.yml
-#    #- ./org.yml
-
-#SERVICE 1
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -31,7 +20,6 @@ spec:
     - pet-store-api1
     - pet-store-api3
 ---
-#SERVICE 2
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
@@ -53,7 +41,6 @@ spec:
   providesApis:
     - pet-store-api2
 ---
-#APIS
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
@@ -93,7 +80,6 @@ spec:
   definition:
     $text: .docs/api3.yml
 ---
-#ORG
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
