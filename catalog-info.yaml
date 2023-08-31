@@ -18,7 +18,7 @@ spec:
   lifecycle: production
   providesApis:
     - pet-store-api1
-    - pet-store-api3
+#    - pet-store-api3
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
@@ -66,16 +66,16 @@ spec:
   system: pet-store-service
   definition:
     $text: ./docs/api2.yml
----
-apiVersion: backstage.io/v1alpha1
-kind: API
-metadata:
-  name: pet-store-api3
-  description: This is a sample server Petstore server.
-spec:
-  type: openapi
-  lifecycle: production
-  owner: pet-store-team
-  system: pet-store-service
-  definition:
-    $text: ./docs/api3.yml
+#---
+#apiVersion: backstage.io/v1alpha1
+#kind: API
+#metadata:
+#  name: pet-store-api3
+#  description: This is a sample server Petstore server.
+#spec:
+#  type: openapi
+#  lifecycle: production
+#  owner: pet-store-team
+#  system: pet-store-service
+#  definition:
+#    $text: ./docs/api3.yml
